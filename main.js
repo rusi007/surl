@@ -6,7 +6,7 @@ function shorturl() {
   }
 
   document.getElementById("addBtn").disabled = true;
-  document.getElementById("addBtn").innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait...';
+  document.getElementById("addBtn").innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>生成中...';
   fetch(window.location.pathname, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -65,11 +65,11 @@ function copyurl(id, attr) {
     range.selectNode(target);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand('复制');
     window.getSelection().removeAllRanges();
-    console.log('Copy success')
+    console.log('复制成功')
   } catch (e) {
-    console.log('Copy error')
+    console.log('复制错误')
   }
 
   if (attr) {
