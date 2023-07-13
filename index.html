@@ -15,16 +15,16 @@
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">长链接</span>
+          <span class="input-group-text" id="basic-addon1">长链接：</span>
         </div>
-        <input type="text" class="form-control" id="longURL" aria-describedby="basic-addon1" placeholder="Example: https://example.com/" oninput="loadUrlList()">
+        <input type="text" class="form-control" id="longURL" aria-describedby="basic-addon1" placeholder="比如: https://example.com/" oninput="loadUrlList()">
       </div>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon2">自定义段链接</span>
+          <span class="input-group-text" id="basic-addon2">自定义短链接：</span>
         </div>
-        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="As you wish">
+        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="比如：music">
       </div>     
 
       <div class="input-group mb-3">
@@ -54,7 +54,7 @@
             <span>some text some text some text some text some text some text some text some text some text some text some text </span>
           </div>
         </div>
-      </div>      
+      </div>
       
       <div class="card-footer">
         <span> </span>
@@ -66,15 +66,15 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="resultModalLabel">Result</h5>
+          <h5 class="modal-title" id="resultModalLabel">结果</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" id="result">No result</div>
+        <div class="modal-body" id="result">无结果</div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
         </div>
       </div>
     </div>
