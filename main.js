@@ -1,7 +1,7 @@
 let res
 function shorturl() {
   if (document.querySelector("#longURL").value == "") {
-    alert("Url cannot be empty!")
+    alert("Url不能为空!")
     return
   }
 
@@ -17,7 +17,7 @@ function shorturl() {
     .then(function (myJson) {
       res = myJson;
       document.getElementById("addBtn").disabled = false;
-      document.getElementById("addBtn").innerHTML = 'Shorten it';
+      document.getElementById("addBtn").innerHTML = '确定';
 
       // 成功生成短链
       if (res.status == "200") {
@@ -36,10 +36,10 @@ function shorturl() {
       $('#resultModal').modal('show')
 
     }).catch(function (err) {
-      alert("Unknow error. Please retry!");
+      alert("未知错误，请重试!");
       console.log(err);
       document.getElementById("addBtn").disabled = false;
-      document.getElementById("addBtn").innerHTML = 'Shorten it';
+      document.getElementById("addBtn").innerHTML = '确定';
     })
 }
 function copyurl(id, attr) {
@@ -152,7 +152,7 @@ function deleteShortUrl(delKeyPhrase) {
         // 加载localStorage
         loadUrlList()
 
-        document.getElementById("result").innerHTML = "Delete Successful"
+        document.getElementById("result").innerHTML = "删除成功"
       } else {
         document.getElementById("result").innerHTML = res.error;
       }
@@ -160,7 +160,7 @@ function deleteShortUrl(delKeyPhrase) {
       $('#resultModal').modal('show')
 
     }).catch(function (err) {
-      alert("Unknow error. Please retry!");
+      alert("未知错误. 请重试!");
       console.log(err);
     })
 }
